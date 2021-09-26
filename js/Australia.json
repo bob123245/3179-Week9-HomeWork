@@ -5,7 +5,7 @@
     "height": 600,
     "projection": {"type": "equirectangular"},
     "data": {
-    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/STE_2021_AUST_GDA2020.json",
+    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/js/STE_2021_AUST_GDA2020.json",
     "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
     },
     "transform": [
@@ -13,7 +13,7 @@
     "lookup": "properties.STE_NAME21",
     "from": {
     "data": {
-    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/au.csv"
+    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/au.csv"
     },  
    "key": "admin_name",
     "fields": ["population"]
