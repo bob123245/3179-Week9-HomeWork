@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
   
-    "width": 800,
-    "height": 600,
+    "width": 400,
+    "height": 300,
      "data": {
  "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/seek_australia_sample.csv"
  },
