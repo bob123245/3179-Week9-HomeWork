@@ -1,40 +1,61 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Australia people destribution ",
+    
+   
+      "title": "Australia main city population ",
     "width": 800,
     "height": 600,
+  
+     
     "projection": {"type": "equirectangular"},
     "data": {
-    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/js/STE_2021_AUST_GDA2020.json",
-    "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+      "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/js/GCCSA_2021_AUST_GDA2020.topojson",
+      "format": {"type": "topojson", "feature": "GCCSA_2021_AUST_GDA2020"}
     },
-    "transform": [
+    
+    "layer":[
     {
-    "lookup": "properties.STE_NAME21",
-    "from": {
-    "data": {
-    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/au.csv"
-    },  
-   "key": "admin_name",
-    "fields": ["population"]
-    }
-    }
-    ],
-    "mark": {"type": "geoshape"},
-    "encoding": {
-    "color": {
-    "field": "population",
-    "type": "quantitative",
-    "scale": {
-    "type": "threshold",
-    "domain": [500, 1000, 2000],
-    "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-    }
-   
+      "transform": [
+        {"calculate": "'Data is not available in ' + datum.properties.GCC_NAME21", "as": "note"}
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "encoding": {
+        "tooltip": {
+          "field": "note"
+        }
+      }
     },
-    "tooltip": [
-    {"field": "properties.STE_NAME21", "type": "nominal", "title": "Country"},
-    {"field": "population", "type": "quantitative"}
+    {
+    "transform": [
+      {
+        "lookup": "properties.GCC_NAME21",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/au.csv"
+          },
+          "key": "city",
+          "fields": ["population_proper"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape","stroke": "black"},
+    
+    "encoding": {
+      "color": {
+        "field": "population_proper",
+        "type": "quantitative",
+        "scale": {
+          "type": "threshold",
+          "domain": [1000000, 2000000, 3000000],
+          "range": [ "#bae4b3", "#74c476", "#31a354","#006d2c"]
+        }
+      },
+      "tooltip": [
+        {"field": "properties.GCC_NAME21", "type": "nominal", "title": "Country"},
+        {"field": "population_proper", "type": "quantitative"}
+      ]}
+      }
     ]
-    }
-   }
+}
+
+    
