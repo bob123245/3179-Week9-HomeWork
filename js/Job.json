@@ -1,0 +1,100 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+  
+    "width": 800,
+    "height": 600,
+     "data": {
+ "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/seek_australia_sample.csv"
+ },
+
+  "params": [
+ {
+ "name": "City_selection",
+ "bind": {
+ "input": "select",
+ "options": [
+ null,
+  "Melbourne",
+ "Sydney",
+ "Brisbane",
+ "Adelaide",
+ "Perth",
+ "Hobart",
+ "Darwin",
+ "ACT"
+ ],
+ "labels":[
+  "Show All",
+ "Melbourne",
+ "Sydney",
+ "Brisbane",
+ "Adelaide",
+ "Perth",
+ "Hobart",
+ "Darwin",
+ "Canberra"
+ ],
+ "name": "City_selection: "
+ }
+ }
+ ],
+ "transform": [
+   {"filter": "City_selection == null || datum.city == City_selection"
+   },
+   {"filter": "datum.city== 'Perth'|| datum.city== 'Melbourne'||datum.city== 'Sydney' || datum.city== 'Brisbane'||datum.city== 'Adelaide'||datum.city== 'Hobart'||datum.city== 'Darwin'||datum.city== 'ACT' "}
+
+],
+
+
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type":"ordinal",
+          "title":"Job category"
+        },
+        "y": {
+           "aggregate":"count",
+           "title":"Jobs"
+
+    
+        },
+       
+
+      "color": {
+      "field": "city",
+      "scale": {
+      "domain": [
+        "Melbourne",
+      "Sydney",
+      "Brisbane",
+      "Adelaide",
+      "Perth",
+      "Hobart",
+      "Darwin",
+      "ACT"
+      ],
+      "range": [
+      "#e41a1c",
+      "#377eb8",
+      "#4daf4a",
+      "#984ea3",
+      "#ff7f00",
+      "#ffff13",
+      "#a65628",
+      "#f781bf"
+]
+ }
+  },
+   "tooltip": [
+ {"field": "category", "type": "nominal"},
+ {"field": "city", "type": "nominal"},
+  {"field": "category", "aggregate":"count"}
+
+      ]
+
+ }
+ 
+    
+}
