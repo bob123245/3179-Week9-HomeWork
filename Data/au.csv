@@ -1,20 +1,20 @@
 city,lat,lng,country,iso2,admin_name,capital,population,population_proper
 Greater Sydney,-33.8650,151.2094,Australia,AU,New South Wales,admin,5312163,4840600
-Melbourne,-37.8136,144.9631,Australia,AU,Victoria,admin,5078193,4529500
-Brisbane,-27.4678,153.0281,Australia,AU,Queensland,admin,2514184,2360241
-Perth,-31.9522,115.8589,Australia,AU,Western Australia,admin,2059484,2039200
-Adelaide,-34.9289,138.6011,Australia,AU,South Australia,admin,1345777,1295714
+Greater Melbourne,-37.8136,144.9631,Australia,AU,Victoria,admin,5078193,4529500
+Greater Brisbane,-27.4678,153.0281,Australia,AU,Queensland,admin,2514184,2360241
+Greater Perth,-31.9522,115.8589,Australia,AU,Western Australia,admin,2059484,2039200
+Greater Adelaide,-34.9289,138.6011,Australia,AU,South Australia,admin,1345777,1295714
 Gold Coast,-28.0167,153.4000,Australia,AU,Queensland,,679127,638090
-Canberra,-35.2931,149.1269,Australia,AU,Australian Capital Territory,primary,426704,381488
+Greater Canberra,-35.2931,149.1269,Australia,AU,Australian Capital Territory,primary,426704,381488
 Newcastle,-32.9167,151.7500,Australia,AU,New South Wales,,322278,152984
 Wollongong,-34.4331,150.8831,Australia,AU,New South Wales,,302739,289236
 Geelong,-38.1500,144.3500,Australia,AU,Victoria,,263280,191440
-Hobart,-42.8806,147.3250,Australia,AU,Tasmania,admin,240342,222356
+Greater Hobart,-42.8806,147.3250,Australia,AU,Tasmania,admin,240342,222356
 Townsville,-19.2564,146.8183,Australia,AU,Queensland,,180820,178649
 Ipswich,-27.6167,152.7667,Australia,AU,Queensland,,163000,163000
 Cairns,-16.9303,145.7703,Australia,AU,Queensland,,152729,146778
 Toowoomba,-27.5667,151.9500,Australia,AU,Queensland,,136861,135631
-Darwin,-12.4381,130.8411,Australia,AU,Northern Territory,admin,136828,136828
+Greater Darwin,-12.4381,130.8411,Australia,AU,Northern Territory,admin,136828,136828
 Ballarat,-37.5500,143.8500,Australia,AU,Victoria,,105471,98543
 Bendigo,-36.7500,144.2667,Australia,AU,Victoria,,99122,95587
 Launceston,-41.4419,147.1450,Australia,AU,Tasmania,,87328,87328
